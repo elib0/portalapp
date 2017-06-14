@@ -1,4 +1,13 @@
-$color1: #7fcded;
-$color2: #009bdb;
-$sombra: #0955ab;
+// Tema de la app
+$color1: #0d3690;
+$color2: lighten($color1, 30%);
+$font-primary: 'Arvo', serif;
 $height: 100%;
+
+// Override de bootstrap
+$brand-primary:             $color1;
+/*$brand-success:             $green !default;
+$brand-info:                $teal !default;
+$brand-warning:             $orange !default;
+$brand-danger:              $red !default;
+$brand-inverse:             $gray-dark !default;*/
