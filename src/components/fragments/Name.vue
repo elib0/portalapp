@@ -9,10 +9,8 @@ export default {
   name: 'fragment-name',
   data () {
     return {
+      nickname: null
     }
-  },
-  props: {
-    nickname: String
   }
 }
 </script>

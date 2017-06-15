@@ -3,7 +3,7 @@
     <swipe class="swipe" :auto="0" :continuous="false">
       <swipe-item>
         <b>Paso 1</b>
-        <fragment-name :nickname="name"></fragment-name>
+        <fragment-name></fragment-name>
       </swipe-item>
       <swipe-item>
         <b>Paso 2</b>
@@ -33,7 +33,6 @@
     },
     data () {
       return {
-        name: ''
       }
     }
   }
