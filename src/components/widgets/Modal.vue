@@ -1,17 +1,8 @@
 <template>
-  <div class="modal animated" :class="{'fadeIn':visible, 'show':visible}" v-show="visible">
-    <div class="m-wrapper">
-      <!-- <span class="fa-stack fa-lg btn-close" @click="hide">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-times fa-stack-1x fa-inverse"></i>
-      </span> -->
-
-      <slot>
-        <div class="m-content"></div>
-
-        <div class="m-footer"></div>
-      </slot>
-
+  <div class="loader animated" v-show="visible">
+    <div class="text-center">
+      <i class="fa fa-cog fa-spin fa-5x fa-fw"></i>
+      <h4 class="main-title"><strong>{{ e.message }}</strong></h4>
     </div>
   </div>
 </template>
@@ -42,6 +33,38 @@
 </script>
 
 
-<style>
+<style scoped lang="scss">
+  @import '../../styles/variables';
+  .loader{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3100;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    // Tiempo de animación
+    animation-duration: 0.5s;
+
+    min-height: 100%;
+    background: $color1;
+    background: -moz-linear-gradient(top, $color1 0%, $color2 100%) no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $color1), color-stop(100%, $color2)) no-repeat;
+    background: -webkit-linear-gradient(top, $color1 0%, $color2 100%) no-repeat;
+    background: -o-linear-gradient(top, $color1 0%, $color2 100%) no-repeat;
+    background: -ms-linear-gradient(top, $color1 0%, $color2 100%) no-repeat;
+    background: linear-gradient(to bottom, $color1 0%, $color2 100%) no-repeat;
+
+    > div {
+      width: 100%;
+      padding: 1.5em 0;
+
+      h4{
+        color: #FFF;
+      }
+    }
+  }
 </style>
