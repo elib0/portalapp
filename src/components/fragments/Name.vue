@@ -1,25 +1,21 @@
 <template>
   <div class="page fragment-name">
+    <modal :visible="true"></modal>
     <input class="form control" type="text" v-model="nickname" placeholder="¿Cual es tu nombre?">
   </div>
 </template>
 
 <script>
-export default {
-  name: 'fragment-name',
-  data () {
-    return {
-      nickname: null
+  import Modal from '../widgets/Modal'
+  export default {
+    name: 'fragment-name',
+    data () {
+      return {
+        nickname: null
+      }
+    },
+    components: {
+      modal: Modal
     }
   }
-}
 </script>
-
-<style lang="scss" scoped>
-  $bg-size: 40%;
-  .fragment-name{
-    background: url("../../assets/pilsen-bg.png") no-repeat top center;
-    -webkit-background-size: $bg-size;
-    background-size: $bg-size;
-  }
-</style>

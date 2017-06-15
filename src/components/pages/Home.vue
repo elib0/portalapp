@@ -13,6 +13,7 @@
       </swipe-item>
       <swipe-item>
         <b>Paso 4</b>
+        <fragment-counter></fragment-counter>
       </swipe-item>
     </swipe>
   </div>
@@ -23,13 +24,15 @@
 
   // Fragmentos
   import Name from '../fragments/Name'
+  import Counter from '../fragments/Counter'
 
   export default {
     name: 'home',
     components: {
       'swipe': Swipe,
       'swipe-item': SwipeItem,
-      'fragment-name': Name
+      'fragment-name': Name,
+      'fragment-counter': Counter
     },
     data () {
       return {

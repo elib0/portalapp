@@ -1,10 +1,18 @@
-// Tema de la app
+/****************/
+/* TEMA DEL APP */
+/****************/
+
+// Fuentes
+$font-primary: 'Arvo', serif;
+
+// Colores principales
 $color1: #0d3690;
 $color2: lighten($color1, 30%);
-$font-primary: 'Arvo', serif;
-$height: 100%;
 
-// Override de bootstrap
+/*************************/
+/* OVERRIDE DE BOOTSTRAP */
+/*************************/
+
 $brand-primary:             $color1;
 /*$brand-success:             $green !default;
 $brand-info:                $teal !default;

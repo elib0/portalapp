@@ -4,10 +4,6 @@ import router from './router'
 
 // Temas
 import './styles/theme.scss'
-import 'animate.css'
-
-// Fuentes
-import 'font-awesome/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 
