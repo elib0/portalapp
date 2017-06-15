@@ -40,12 +40,6 @@ h1, h2{
   @include minHeight($height);
 }
 
-.page{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 // Inputs del Tema
 label {  display: block;  }
 textarea,

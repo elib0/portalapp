@@ -1,71 +1,49 @@
 <template>
-  <div class="page-home">
-    <div class="container-fluid">
-      <h5 class="text-primary text-center">Curdas bebidas: {{total}}</h5>
-      <div class="row align-items-center">
-        <div class="col-7">
-          <div class="card" v-show="total > 0">
-            <div class="card-block">
-              <transition-group
-                name="custom"
-                enter-active-class="animated fadeIn">
-                <i class="fa fa-beer fa-2x beer" v-for="n in total" :key="n" aria-hidden="true" @click="restar"></i>
-              </transition-group>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          curdas por ronda <input class="smaller" type="number" v-model="rondas">
-        </div>
-      </div>
-    </div>
-    <button class="btn btn-success" @click="sumar">
-      <i class="fa fa-plus" aria-hidden="true"></i>
-    </button>
+  <div class="page">
+    <swipe class="swipe" :auto="0" :continuous="false">
+      <swipe-item>
+        <b>Paso 1</b>
+        <fragment-name :nickname="name"></fragment-name>
+      </swipe-item>
+      <swipe-item>
+        <b>Paso 2</b>
+      </swipe-item>
+      <swipe-item>
+        <b>Paso 3</b>
+      </swipe-item>
+      <swipe-item>
+        <b>Paso 4</b>
+      </swipe-item>
+    </swipe>
   </div>
 </template>
 
 <script>
+  import { Swipe, SwipeItem } from 'vue-swipe'
+
+  // Fragmentos
+  import Name from '../fragments/Name'
+
   export default {
     name: 'home',
+    components: {
+      'swipe': Swipe,
+      'swipe-item': SwipeItem,
+      'fragment-name': Name
+    },
     data () {
       return {
-        rondas: 1,
-        total: 0,
-        precio: 2200,
-        licoreriaSeleccionada: null,
-        licorarias: [
-          {'El portal': 2200},
-          {'La bomba': 1500}
-        ]
-      }
-    },
-    methods: {
-      sumar () {
-        this.total += (this.rondas) * 1
-      },
-      restar () {
-        this.total -= 1
+        name: ''
       }
     }
   }
 </script>
 
-<style lang="scss" scoped>
-  .page-home{
-    height:100%;
-    background: url("../../assets/black-bg.png") no-repeat bottom center;
-    -webkit-background-size: 40%;
-    background-size: 40%;
-    i.beer{
-      color: #ffb12f;
-    }
-    .contador{
-    }
-    &>button{
-      bottom: 1rem;
-      right: 1rem;
-      position: fixed;
-    }
+<style scoped>
+  @import "../../../node_modules/vue-swipe/dist/vue-swipe.css";
+
+  .swipe {
+    height: 100%;
+    text-align: center;
   }
 </style>

@@ -4723,6 +4723,12 @@ vue-style-loader@^3.0.0, vue-style-loader@^3.0.1:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
+vue-swipe@elib0/vue-swipe:
+  version "2.0.2"
+  resolved "https://codeload.github.com/elib0/vue-swipe/tar.gz/12c5d99f2ec47ebc483a5e7fdabb1e11f270bef5"
+  dependencies:
+    wind-dom "0.0.3"
+
 vue-template-compiler@^2.3.3:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.3.4.tgz#5a88ac2c5e4d5d6218e6aa80e7e221fb7e67894c"
@@ -4852,6 +4858,10 @@ wide-align@^1.1.0:
   resolved "https://registry.yarnpkg.com/wide-align/-/wide-align-1.1.2.tgz#571e0f1b0604636ebc0dfc21b0339bbe31341710"
   dependencies:
     string-width "^1.0.2"
+
+wind-dom@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/wind-dom/-/wind-dom-0.0.3.tgz#3456e3d959dbebdcbf76ca68c6a4e8142f26360f"
 
 window-size@0.1.0:
   version "0.1.0"
