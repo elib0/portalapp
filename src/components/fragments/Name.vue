@@ -1,5 +1,5 @@
 <template>
-  <div class="page fragment-name">
+  <div class="page fragment-name d-flex justify-content-center align-items-center">
     <modal :visible="true"></modal>
     <input class="form control" type="text" v-model="nickname" placeholder="¿Cual es tu nombre?">
   </div>

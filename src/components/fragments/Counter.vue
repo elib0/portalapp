@@ -1,17 +1,9 @@
 <template>
-  <div class="fragment-counter">
-    <div class="container-fluid">
-
-      <div class="row">
-        <div class="col">
-          <input placeholder="curdas por ronda" type="number" v-model="rondas">
-          <label> curdas por ronda</label>
-        </div>
-      </div>
-
+  <div class="fragment-counter d-flex justify-content-center align-items-center">
+    <div class="container-fluid beers">
       <div class="row align-items-center">
         <div class="col">
-          <div class="card" v-show="total > 0">
+          <div v-show="total > 0">
             <div class="card-block">
               <transition-group
                 name="custom"
@@ -23,8 +15,17 @@
           </div>
         </div>
       </div>
-
     </div>
+
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col">
+          <input placeholder="curdas por ronda" type="number" v-model="rondas">
+          <label> curdas por ronda</label>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <button class="btn btn-success" @click="sumar">
         <i class="fa fa-plus" aria-hidden="true"></i>
@@ -49,6 +50,9 @@
       },
       restar () {
         this.total -= 1
+      },
+      reiniciar () {
+        this.total = 0
       }
     }
   }

@@ -100,9 +100,17 @@ html {
       background: url("../assets/black-bg.png") no-repeat top center;
       -webkit-background-size: $bg-size;
       background-size: $bg-size;
-      i.beer{
-        color: #ffb12f;
+
+      .beers{
+        top: 2rem;
+        left: 0;
+        position: fixed;
+
+        i.beer{
+          color: #ffb12f;
+        }
       }
+
 
       footer{
         width: 100%;
