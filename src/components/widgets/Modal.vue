@@ -1,17 +1,15 @@
 <template>
   <div class="loader animated" v-show="visible">
     <div class="text-center">
-      <i class="fa fa-cog fa-spin fa-5x fa-fw"></i>
-      <h4 class="main-title"><strong>{{ e.message }}</strong></h4>
+      <i class="fa fa-refresh fa-spin fa-5x fa-fw"></i>
+      <h4 class="main-title"><strong>{{ title }}</strong></h4>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    data () {
-      return {}
-    },
+    data () {},
     props: {
       title: {
         type: String,
